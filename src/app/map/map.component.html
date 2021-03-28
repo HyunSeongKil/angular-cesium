@@ -1,0 +1,18 @@
+<p>map works!</p>
+<div>
+    <button type="button" class="btn btn-outline-primary mr-1" (click)="onFlyTo(128.02025, 38.03375, 1500000)">flyto</button>
+    <button type="button" class="btn btn-outline-primary mr-1" (click)="onGetAutoPostingResults()">자동배치결과조회</button>
+    <button type="button" class="btn btn-outline-primary mr-1" (click)="startLandscapeAxis()">경관축</button>
+    <button type="button" class="btn btn-outline-primary" (click)="endLandscapeAxis()">경관축 제거</button>
+</div>
+
+
+<div *ngFor="let item of autoPostingResults; let i = index">
+    <a href="javascript:;" (click)="OnShowAutoPosting(i, item.id)">
+        {{item.analsPostingInfoName}}
+    </a>
+    {{i}} {{item.id}} {{item.analsPostingGroupId}} 
+</div>
+
+
+<div id="contain"></div>
